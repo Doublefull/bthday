@@ -13,6 +13,7 @@ from django.contrib import admin
 from mysite.views import hello, current_datetime,current_datetime_2, ua_display_good2,ua_display_good1, hours_ahead
 #from books import views
 from birthdays import  views
+from bthdays import  views
 
 urlpatterns = [
     url(r'^hello/$', hello),
@@ -23,7 +24,8 @@ urlpatterns = [
     url(r'^good1/$', ua_display_good1),
     url(r'^good2/$', ua_display_good2),
 #    url(r'^search/$',views.search),
-    url(r'^contact/$', views.contact),
+#    url(r'^contact/$', views.contact),
     url(r'^contact/thanks/$', views.thanks),
-    url(r'^birthday/$', views.birthday),
+#    url(r'^birthday/$', views.birthday),
+    url(r'^bthday/$', views.bthdays),
 ]

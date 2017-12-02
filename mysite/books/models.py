@@ -24,6 +24,15 @@ class Author(models.Model):
     def __str__(self):
         return '%s %s' % (self.first_name, self.last_name)
 
+
+class Author2(models.Model):
+    salutation = models.CharField(max_length=10)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=40)
+    email = models.EmailField()
+    headshot = models.ImageField(upload_to='tmp')
+
+
 class Book(models.Model):
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)
