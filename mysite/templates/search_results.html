@@ -1,12 +1,12 @@
 <p>You searched for: <strong>{{ query }}</strong></p>
 
-{% if books %}
-    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+{% if bth_obj %}
+    <p>Found {{ bth_obj|length }} obj {{ bth_obj|pluralize }}.</p>
     <ul>
-        {% for book in books %}
-        <li>{{ book.title }}</li>
+        {% for obj in bth_obj %}
+        <li>{{ obj.name }}</li>
         {% endfor %}
     </ul>
 {% else %}
-    <p>No books matched your search criteria.</p>
+    <p>No name  matched your search criteria.</p>
 {% endif %}

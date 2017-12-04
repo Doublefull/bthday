@@ -45,3 +45,17 @@ def bthdays(request):
     return render_to_response('contact_form.html', {'form': form})
 
 
+
+def bthdays_search(request):
+    error = False
+    if 'q' in request.GET:
+        q = request.GET['q']
+        if not q:
+            error = True
+        else:
+            bth_obj = Bthdays.objects.filter(name__icontains=q) # if field name of enty Bthdays object contains query
+            return render_to_response('search_results.html',
+                {'bth_obj': bth_obj, 'query': q})
+    return render_to_response('search_form.html',
+        {'error': error})
+

@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^contact/thanks/$', views.thanks),
 #    url(r'^birthday/$', views.birthday),
     url(r'^bthday/$', views.bthdays),
+    url(r'^bthdays_search/$', views.bthdays_search),
+
 ]
