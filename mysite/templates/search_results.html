@@ -4,7 +4,7 @@
     <p>Found {{ bth_obj|length }} obj {{ bth_obj|pluralize }}.</p>
     <ul>
         {% for obj in bth_obj %}
-        <li>{{ obj.name }}</li>
+        <li>Name: {{ obj.name }} Email: {{obj.email}} Date: {{obj.date}}</li>
         {% endfor %}
     </ul>
 {% else %}
